@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOMMY-speedTest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .box {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speed Test Results</h1>
+    <div class="box">
+        <h2>Download Speed</h2>
+        <p>{{ results.Download_Speed }}</p>
+        <h2>Upload Speed</h2>
+        <p>{{ results.Upload_Speed }}</p>
+        <h2>Ping</h2>
+        <p>{{ results.Ping }}</p>
+    </div>
+    <div class="box">
+        <h2>Server Information</h2>
+        <p>Name: {{ results.S_Name }}</p>
+        <p>Country: {{ results.S_Country }}</p>
+        <p> Location: {{ results.S_Location }}</p>
+        <p> Latency: {{ results.S_Latency }}</p>
+    </div>
+    <div class="box">
+        <h2>Client Information</h2>
+        <p>Client IP Address: {{ results.C_IP_Address }}</p>
+        <p>ISP: {{ results.C_ISP }}</p>
+        <p>Country : {{ results.C_Country }}</p>
+        <p>Timestamp :{{ results.C_Timestamp }}</p>
+    </div>
+    <div><a href={{results.Img_Url}}>Results in image</a></div>
+</body>
+</html>
